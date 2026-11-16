@@ -429,14 +429,17 @@ function renderRanking(){return `<div class="hero"><div class="eyebrow">COMUNITA
 function render(){let m=$('#main');if(state.page==='home')m.innerHTML=renderHome();else if(state.page==='learn')m.innerHTML=renderLearn();else if(state.page==='notes'){m.innerHTML=renderNotes();$('#notesSearch').oninput=filterNotes;}else if(state.page==='ranking'){m.innerHTML=renderRanking();loadCommunity();}}
 function sendChat(){let input=$('#chatInput');if(!input||!input.value.trim())return;let msg=input.value.trim();if(!db){toast('Connecta Firebase per enviar missatges a tothom.');return;}db.collection('messages').add({name:state.name,text:msg,uid:auth.currentUser.uid,created:firebase.firestore.FieldValue.serverTimestamp()}).then(()=>input.value='').catch(()=>toast('No s’ha pogut enviar el missatge.'));}
 /* ── FIREBASE: enganxa aquí la configuració del teu projecte per activar xat i ranking compartits ── */
+
 const firebaseConfig = {
-  apiKey: "ENGANXA_AQUI_API_KEY",
-  authDomain: "EL_TEU_PROJECTE.firebaseapp.com",
-  projectId: "EL_TEU_PROJECTE",
-  storageBucket: "EL_TEU_PROJECTE.appspot.com",
-  messagingSenderId: "ENGANXA_SENDER_ID",
-  appId: "ENGANXA_APP_ID"
+  apiKey: "AIzaSyDk_x_M9T56yjA640po-vbnKtbVy1QJ9sE",
+  authDomain: "socialest2.firebaseapp.com",
+  projectId: "socialest2",
+  storageBucket: "socialest2.firebasestorage.app",
+  messagingSenderId: "346511810279",
+  appId: "1:346511810279:web:e5630854f2613a8f12cc42",
+  measurementId: "G-219WKGX51Y"
 };
+
 let db=null,auth=null;
 try{if(firebaseConfig.apiKey!=="ENGANXA_AQUI_API_KEY"&&window.firebase){firebase.initializeApp(firebaseConfig);auth=firebase.auth();db=firebase.firestore();auth.signInAnonymously().then(()=>{syncUser();if(state.page==='ranking')loadCommunity();}).catch(console.error);}}catch(e){console.warn('Firebase no configurat',e);}
 function syncUser(){if(!db||!auth||!auth.currentUser||!state.name)return;db.collection('users').doc(auth.currentUser.uid).set({name:state.name,points:state.points,updated:firebase.firestore.FieldValue.serverTimestamp()},{merge:true}).catch(console.error);}
