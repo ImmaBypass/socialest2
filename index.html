@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbfaf8"><title>Estudia Historia — Aula</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#20211f;--muted:#85857f;--line:#e9e8e3;--paper:#fbfaf8;--white:#fff;--accent:#b69b76;--soft:#f3f0eb;--green:#587b65;--red:#a75d55;--shadow:0 16px 50px #24211b0c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#f1eee8 0,transparent 34%),radial-gradient(ellipse at 95% 30%,#f5f3ef 0,transparent 28%),var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}button,input,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1240px;margin:auto;padding:28px 34px 70px}.top{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-family:Manrope;font-weight:800;letter-spacing:-.5px}.brandmark{width:36px;height:36px;border-radius:12px;background:#252622;color:white;display:grid;place-items:center;font-family:Georgia;font-size:20px}.topright{display:flex;align-items:center;gap:10px}.profile-pill{border:1px solid var(--line);background:#fff;border-radius:99px;padding:9px 14px;display:flex;align-items:center;gap:9px;font-size:13px}.avatar{width:25px;height:25px;border-radius:50%;background:#eae3d8;display:grid;place-items:center;font-weight:700}.layout{display:grid;grid-template-columns:220px 1fr;gap:42px;padding-top:30px}.sidebar{position:sticky;top:24px;align-self:start}.side-label{font-size:10px;letter-spacing:1.6px;color:#aaa69e;font-weight:700;margin:12px 12px}.nav{width:100%;border:0;background:transparent;color:#77766f;padding:13px 14px;border-radius:12px;text-align:left;display:flex;gap:12px;align-items:center;font-size:14px;transition:.2s}.nav:hover,.nav.active{background:#eeece7;color:#222}.nav.active{font-weight:700}.nav .ico{width:20px;text-align:center;font-size:16px}.side-note{margin:35px 8px 0;padding:17px;border:1px solid var(--line);border-radius:16px;background:#ffffff80;font-size:12px;color:var(--muted);line-height:1.6}.main{min-width:0;animation:rise .45s ease both}@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}.eyebrow{font-size:10px;letter-spacing:2px;color:#a18d72;font-weight:700;text-transform:uppercase}.hero{padding:22px 0 28px}.hero h1{font:700 clamp(30px,4vw,48px)/1.12 Manrope;margin:10px 0;letter-spacing:-2px}.hero p{color:var(--muted);max-width:610px;line-height:1.7;margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.panel,.topic-card,.stat{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow)}.panel{padding:24px}.topic-card{padding:22px;transition:.25s;cursor:pointer;position:relative;overflow:hidden}.topic-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px #29251c12;border-color:#d8d0c3}.topic-num{font:600 12px Manrope;color:#b39b7a}.topic-card h3{font:700 18px Manrope;letter-spacing:-.5px;margin:12px 0 8px}.topic-card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 17px}.progress{height:4px;background:#efeee9;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:#b69b76;border-radius:9px;transition:width .4s}.meta{display:flex;justify-content:space-between;color:#9b9991;font-size:11px;margin-top:10px}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:5px 0 25px}.stat{padding:17px}.stat strong{font:700 25px Manrope;display:block;letter-spacing:-1px}.stat span{font-size:11px;color:var(--muted)}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 0 15px}.section-head h2{font:700 19px Manrope;margin:0}.btn{border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 16px;color:var(--ink);font-weight:600;font-size:13px;transition:.2s}.btn:hover{background:#f2f0eb;transform:translateY(-1px)}.btn.primary{background:#252622;color:white;border-color:#252622}.btn.primary:hover{background:#44453f}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.btn.small{padding:8px 12px;font-size:12px}.back{border:0;background:transparent;color:#85837b;padding:8px 0;font-size:13px;margin-bottom:14px}.back:hover{color:#222}.reading{font-size:15px;line-height:1.9;color:#4b4b45}.reading h2{font:700 26px Manrope;letter-spacing:-1px;color:#20211f;margin:10px 0 20px}.reading h3{font:700 17px Manrope;color:#292a26;margin:26px 0 8px}.reading ul,.reading ol{padding-left:22px}.reading li{padding:3px 0}.reading strong{color:#252622}.callout{border-left:3px solid #b69b76;background:#f6f3ee;padding:15px 18px;margin:20px 0;border-radius:0 12px 12px 0}.studybar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 22px}.stepdots{display:flex;gap:5px}.stepdots i{height:4px;width:25px;border-radius:5px;background:#e7e5df}.stepdots i.done{background:#a88e6a}.question{font:700 23px/1.4 Manrope;letter-spacing:-.6px;margin:16px 0 20px}.answerbox{width:100%;min-height:130px;resize:vertical;border:1px solid #e4e1da;border-radius:14px;padding:16px;background:#fff;outline:none;line-height:1.6}.answerbox:focus,input:focus{border-color:#b69b76;box-shadow:0 0 0 3px #b69b761a}.flip{perspective:1000px;margin:18px 0}.flip-inner{transition:transform .65s;transform-style:preserve-3d;position:relative;min-height:220px}.flip-inner.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;backface-visibility:hidden;border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;box-shadow:var(--shadow);overflow:auto}.face.backface{transform:rotateY(180deg);background:#f7f5f0}.face h3{font:700 17px Manrope;margin:0 0 12px}.face p{white-space:pre-line;line-height:1.75;color:#55554f;font-size:14px}.judge{display:flex;gap:10px;margin-top:16px}.btn.good{background:#eaf1eb;color:#42634d;border-color:#dce9df}.btn.bad{background:#f6ecea;color:#96574f;border-color:#eedbd8}.notice{font-size:12px;color:var(--muted);line-height:1.6}.search{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;outline:none;margin:8px 0 18px}.notes-list{display:grid;gap:10px}.notes-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 19px}.notes-item summary{cursor:pointer;font:700 15px Manrope}.notes-item .reading{padding-top:12px;font-size:14px}.rankrow{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.ranknum{font:700 16px Manrope;color:#aaa18f;width:25px}.rankname{flex:1;font-weight:600;font-size:14px}.rankpoints{font-size:12px;color:#9b896d}.chatlog{height:300px;overflow:auto;border:1px solid var(--line);border-radius:14px;padding:14px;background:#fcfbf9;display:flex;flex-direction:column;gap:10px}.bubble{max-width:85%;background:#efede8;border-radius:13px 13px 13px 4px;padding:10px 12px;font-size:13px;line-height:1.5;align-self:flex-start}.bubble.mine{background:#292a26;color:white;align-self:flex-end;border-radius:13px 13px 4px 13px}.bubble small{display:block;opacity:.6;font-size:10px;margin-bottom:3px}.chatform{display:flex;gap:8px;margin-top:10px}.chatform input{flex:1;min-width:0;border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff;outline:none}.music{position:fixed;right:22px;bottom:20px;background:#252622;color:white;border:0;border-radius:99px;padding:12px 16px;box-shadow:0 8px 25px #0002;font-size:12px;z-index:4}.modal{position:fixed;inset:0;background:#17171380;display:grid;place-items:center;padding:20px;z-index:10;backdrop-filter:blur(7px)}.modalbox{background:#fff;border-radius:22px;padding:30px;width:min(420px,100%);box-shadow:0 25px 80px #0003}.modalbox h2{font:700 26px Manrope;letter-spacing:-1px;margin:8px 0}.modalbox p{color:var(--muted);font-size:13px;line-height:1.6}.modalbox input{width:100%;padding:14px;border:1px solid var(--line);border-radius:11px;margin:12px 0;outline:none}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#252622;color:#fff;padding:12px 18px;border-radius:99px;font-size:12px;z-index:20;box-shadow:var(--shadow)}footer{border-top:1px solid var(--line);margin-top:55px;padding-top:20px;color:#aaa69e;font-size:11px;display:flex;justify-content:space-between}.empty{padding:22px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.shell{padding:17px 17px 80px}.layout{grid-template-columns:1fr;gap:18px}.sidebar{position:static;display:flex;overflow:auto;gap:5px;padding-bottom:4px}.side-label,.side-note{display:none}.nav{width:auto;white-space:nowrap;padding:10px 12px;font-size:12px}.nav .ico{display:none}.grid{grid-template-columns:1fr}.hero{padding-top:14px}.statrow{gap:8px}.stat{padding:13px}.stat strong{font-size:21px}.top{padding-bottom:17px}.brand{font-size:14px}.profile-pill{padding:7px 10px}.panel{padding:18px}.question{font-size:20px}.music{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand"><div class="brandmark">A</div><span>AULA <span style="font-weight:400;color:#a49b8d">/ HISTÒRIA</span></span></div><div class="topright"><button class="btn small" id="editName">Editar perfil</button><div class="profile-pill"><span class="avatar" id="avatar">?</span><span id="profileName">Estudiant</span></div></div></header>
+<div class="layout">
+<aside class="sidebar">
+<div class="side-label">ESPAI D'APRENENTATGE</div>
+<button class="nav active" data-page="home"><span class="ico">⌂</span>Inici</button>
+<button class="nav" data-page="learn"><span class="ico">✳</span>Aprendre</button>
+<button class="nav" data-page="notes"><span class="ico">▤</span>Apunts complets</button>
+<button class="nav" data-page="ranking"><span class="ico">♙</span>Ranking i xat</button>
+<div class="side-note">Un pas cada vegada.<br><strong>Entendre · Recordar · Dominar</strong><br><br>El teu progrés es desa automàticament en aquest dispositiu.</div>
+</aside>
+<main class="main" id="main"></main>
+</div>
+<footer><span>AULA HISTÒRIA · ESPAI PERSONAL D'ESTUDI</span><span>Aprèn al teu ritme.</span></footer>
+</div>
+<button class="music" id="musicBtn">♫ Activar música</button><audio id="studyMusic" loop></audio>
+<div class="modal hidden" id="nameModal"><div class="modalbox"><div class="eyebrow">EL TEU ESPAI PERSONAL</div><h2>Com et diem?</h2><p>Tria un nom per al teu perfil. El podràs canviar sempre que vulguis.</p><input id="nameInput" maxlength="24" placeholder="El teu nom"><button class="btn primary" id="saveName" style="width:100%">Entrar a estudiar →</button></div></div>
+<div class="toast hidden" id="toast"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+// ── CONTINGUT DELS APUNTS: transcrit i organitzat a partir del document facilitat ──
+const parts = [
+{title:"Els Reis Catòlics i l'origen de la monarquia hispànica",sections:[
+{title:"Isabel I de Castella i Ferran II d'Aragó",body:`Isabel I de Castella es va casar amb Ferran II d'Aragó l'any 1469. Se'ls coneix com els Reis Catòlics.
+
+Van unir dinàsticament les corones de Castella i Aragó (1479), però cada territori va conservar les seves pròpies lleis, institucions i moneda.
+
+Van conquerir el regne musulmà de Granada el 1492. També van donar suport al viatge de Cristòfor Colom, que va arribar a Amèrica el 1492.
+
+MOLT IMPORTANT: no van crear un únic estat completament unificat. Castella i Aragó continuaven sent territoris diferents, governats pels mateixos monarques.`,
+questions:[
+["En quin any es van casar Isabel I de Castella i Ferran II d'Aragó?","L'any 1469."],
+["Com es coneix Isabel I de Castella i Ferran II d'Aragó?","Com els Reis Catòlics."],
+["Què van unir dinàsticament l'any 1479?","Les corones de Castella i Aragó."],
+["Els territoris de Castella i Aragó van perdre les seves lleis i institucions pròpies?","No. Cada territori va conservar les seves pròpies lleis, institucions i moneda."],
+["Quin regne musulmà van conquerir l'any 1492?","El regne musulmà de Granada."],
+["A quin viatge van donar suport els Reis Catòlics i quin any va arribar Colom a Amèrica?","Van donar suport al viatge de Cristòfor Colom, que va arribar a Amèrica el 1492."],
+["Per què és incorrecte dir que els Reis Catòlics van crear un únic estat completament unificat?","Perquè Castella i Aragó continuaven sent territoris diferents, amb lleis, institucions i moneda pròpies, encara que tenien els mateixos monarques."]]},
+{title:"Joana I de Castella (Joana la Boja) i Felip I (Felip el Bell)",body:`Joana era filla dels Reis Catòlics.
+
+Es va casar amb Felip I d'Habsburg, conegut com Felip el Bell.
+
+Van tenir un fill: Carles I d'Espanya.`,questions:[
+["Qui era Joana I de Castella?","Era filla dels Reis Catòlics."],
+["Amb qui es va casar Joana?","Amb Felip I d'Habsburg, conegut com Felip el Bell."],
+["Com era conegut Felip I?","Com Felip el Bell."],
+["Quin fill van tenir Joana i Felip?","Carles I d'Espanya."]]},
+{title:"Carles I d'Espanya i V del Sacre Imperi Romanogermànic (1516-1556)",body:`Carles I va heretar un territori enorme gràcies als seus avis materns i paterns.
+
+DE LA SEVA MARE, JOANA:
+• Corona de Castella.
+• Corona d'Aragó.
+• Territoris americans.
+• Possessions al Mediterrani.
+
+DE LA SEVA FAMÍLIA PATERNA:
+• Països Baixos (territoris que avui inclouen part dels Països Baixos, Bèlgica i Luxemburg).
+• Territoris dels Habsburg a Àustria.
+• Drets sobre el Sacre Imperi Romanogermànic.
+
+Va ser elegit emperador del Sacre Imperi Romanogermànic el 1519.
+
+PROBLEMES DURANT EL SEU REGNAT:
+1. Revolta de les Comunitats (Comuneros): a Castella (1520-1521). Diverses ciutats es van revoltar contra el poder del rei i els seus consellers.
+2. Revolta de les Germanies: a València i Mallorca (1519-1523). Artesans i sectors populars es van revoltar contra els nobles i les autoritats.
+
+Les dues revoltes van acabar sent derrotades per les forces reials.
+
+PER MEMORITZAR: Carles I = imperi enorme + revolta dels Comuneros + Germanies.
+
+Precisió: l'Imperi austrohongarès encara no existia. Es va crear el 1867, molt després d'aquests reis.`,questions:[
+["De qui va heretar Carles I els seus territoris?","Dels seus avis materns i paterns."],
+["Quins territoris va heretar de la seva mare Joana?","La Corona de Castella, la Corona d'Aragó, els territoris americans i possessions al Mediterrani."],
+["Quins territoris va heretar de la família paterna?","Els Països Baixos, territoris dels Habsburg a Àustria i drets sobre el Sacre Imperi Romanogermànic."],
+["En quin any va ser elegit emperador del Sacre Imperi Romanogermànic?","El 1519."],
+["On i quan va tenir lloc la Revolta de les Comunitats o Comuneros?","A Castella, entre 1520 i 1521."],
+["Qui es va revoltar durant la Revolta de les Germanies, i on i quan?","Artesans i sectors populars es van revoltar contra els nobles i les autoritats a València i Mallorca entre 1519 i 1523."],
+["Com van acabar les revoltes dels Comuneros i de les Germanies?","Totes dues van ser derrotades per les forces reials."],
+["Quina és la idea clau per memoritzar el regnat de Carles I?","Un imperi enorme, la revolta dels Comuneros i les Germanies."],
+["Quan es va crear l'Imperi austrohongarès segons els apunts?","El 1867; encara no existia durant el regnat de Carles I."]]}
+]},
+{title:"Felip II (1556-1598)",sections:[
+{title:"Felip II: territoris i política",body:`Felip II era fill de Carles I i va heretar una gran part dels seus territoris.
+
+TERRITORIS QUE VA GOVERNAR:
+• Corona de Castella.
+• Corona d'Aragó.
+• Territoris americans.
+• Països Baixos espanyols.
+• Altres possessions europees i mediterrànies.
+
+QUÈ VA PASSAR DURANT EL SEU REGNAT?
+1. Va convertir-se en el gran defensor del catolicisme davant l'expansió del protestantisme.
+2. Va lluitar contra els protestants dels Països Baixos, que es van revoltar contra el seu govern.
+3. Les províncies del nord dels Països Baixos van acabar independitzant-se d'Espanya, un procés que es va consolidar al segle XVII.
+4. Va traslladar la cort a Madrid el 1561.
+5. Va incorporar Portugal a la monarquia hispànica el 1580.
+
+IDEA CLAU PER A L'EXAMEN: Felip II = defensa del catolicisme + conflicte amb els protestants + revolta dels Països Baixos.`,questions:[
+["De qui era fill Felip II?","Era fill de Carles I."],
+["Quins territoris principals va governar Felip II?","Castella, Aragó, territoris americans, Països Baixos espanyols i altres possessions europees i mediterrànies."],
+["Quina religió va defensar Felip II davant l'expansió del protestantisme?","El catolicisme."],
+["Contra qui va lluitar als Països Baixos?","Contra els protestants dels Països Baixos, que es van revoltar contra el seu govern."],
+["Què va passar amb les províncies del nord dels Països Baixos?","Van acabar independitzant-se d'Espanya; el procés es va consolidar al segle XVII."],
+["Quan va traslladar la cort a Madrid?","L'any 1561."],
+["Quan va incorporar Portugal a la monarquia hispànica?","L'any 1580."],
+["Resumeix la idea clau del regnat de Felip II.","Defensa del catolicisme, conflicte amb els protestants i revolta dels Països Baixos."]]}
+]},
+{title:"Els últims Àustries: Felip III, Felip IV i Carles II",sections:[
+{title:"Els últims Àustries i els reis absentistes",body:`Felip III, Felip IV i Carles II pertanyien a la dinastia dels Habsburg, també anomenats Àustries.
+
+Durant els seus regnats es va produir una progressiva decadència de la monarquia hispànica, amb problemes econòmics, militars i polítics.
+
+També es van caracteritzar per governar mitjançant persones de confiança anomenades VALIDOS o PRIVATS.
+
+QUÈ SÓN ELS REIS ABSENTISTES?
+Són reis que delegaven bona part de les tasques de govern en persones de confiança. Aquestes persones rebien el nom de validos o privats i prenien moltes de les decisions polítiques en nom del rei.
+
+No vol dir necessàriament que no fessin absolutament res, sinó que no governaven directament tots els assumptes.`,questions:[
+["A quina dinastia pertanyien Felip III, Felip IV i Carles II?","A la dinastia dels Habsburg, també anomenats Àustries."],
+["Què va passar progressivament durant els seus regnats?","Es va produir una decadència de la monarquia hispànica, amb problemes econòmics, militars i polítics."],
+["Com s'anomenaven les persones de confiança que assumien tasques de govern?","Validos o privats."],
+["Què són els reis absentistes?","Reis que delegaven bona part de les tasques de govern en persones de confiança, anomenades validos o privats."],
+["Ser un rei absentista vol dir necessàriament que no feia absolutament res?","No. Vol dir que no governava directament tots els assumptes i que delegava bona part de les tasques."]]},
+{title:"Felip III (1598-1621)",body:`Era fill de Felip II.
+
+CARACTERÍSTIQUES:
+• Tenia poc interès per governar directament.
+• Va delegar el poder en el seu valido, el duc de Lerma.
+• Durant el seu regnat, Madrid es va consolidar com a capital permanent de la monarquia.
+
+FETS IMPORTANTS:
+1. Expulsió dels moriscos (1609-1614): va ordenar expulsar els moriscos, és a dir, els descendents de musulmans que s'havien convertit oficialment al cristianisme.
+2. Aquesta expulsió va perjudicar l'economia, especialment en algunes zones agrícoles, perquè molts moriscos treballaven al camp i en activitats artesanals.
+
+COMPTE AMB AQUESTA CONFUSIÓ:
+Els jueus NO van ser expulsats per Felip III.
+• Els jueus van ser expulsats pels Reis Catòlics l'any 1492.
+• Els moriscos van ser expulsats durant el regnat de Felip III, a partir de 1609.`,questions:[
+["De qui era fill Felip III?","De Felip II."],
+["Qui era el valido de Felip III?","El duc de Lerma."],
+["Què va passar amb Madrid durant el seu regnat?","Es va consolidar com a capital permanent de la monarquia."],
+["Què va ordenar Felip III entre 1609 i 1614?","L'expulsió dels moriscos."],
+["Qui eren els moriscos?","Els descendents de musulmans que s'havien convertit oficialment al cristianisme."],
+["Quines conseqüències econòmiques va tenir l'expulsió dels moriscos?","Va perjudicar l'economia, especialment algunes zones agrícoles, perquè molts treballaven al camp i en activitats artesanals."],
+["Qui va expulsar els jueus i en quin any?","Els Reis Catòlics, l'any 1492."],
+["Qui va expulsar els moriscos i a partir de quin any?","Felip III, a partir de 1609."]]},
+{title:"Felip IV (1621-1665) i el comte-duc d'Olivares",body:`Era fill de Felip III.
+
+CARACTERÍSTIQUES:
+• Va delegar gran part del poder en el seu valido, el comte-duc d'Olivares.
+• Olivares volia reforçar el poder de la monarquia i aconseguir que tots els territoris contribuïssin econòmicament i militarment a les guerres.
+• Aquestes mesures van provocar revoltes en diversos territoris.
+
+Un dels esdeveniments més importants del seu regnat va ser la Guerra dels Segadors.`,questions:[
+["De qui era fill Felip IV?","De Felip III."],
+["Qui era el seu valido?","El comte-duc d'Olivares."],
+["Què volia aconseguir Olivares?","Reforçar el poder de la monarquia i que tots els territoris contribuïssin econòmicament i militarment a les guerres."],
+["Què van provocar les mesures d'Olivares?","Revoltes en diversos territoris."],
+["Quin conflicte important va tenir lloc durant el regnat de Felip IV?","La Guerra dels Segadors."]]},
+{title:"La Guerra dels Segadors (1640-1652 a Catalunya)",body:`CAUSES DE LA GUERRA:
+1. El comte-duc d'Olivares volia que Catalunya contribuís més a les despeses militars de la monarquia.
+2. Les tropes reials estaven allotjades a les cases dels habitants de Catalunya durant la guerra contra França.
+3. Els soldats van cometre abusos, robatoris i violències contra la població.
+4. La població catalana estava molt enfadada amb la presència de les tropes.
+
+EL CORPUS DE SANG (7 DE JUNY DE 1640)
+Aquest va ser l'esdeveniment que va fer esclatar la revolta.
+• El 7 de juny de 1640 se celebrava el Corpus Christi.
+• Molts segadors van entrar a Barcelona.
+• Es van produir enfrontaments i revoltes contra les autoritats reials.
+• Va morir el virrei de Catalunya, el comte de Santa Coloma.
+Aquest esdeveniment es coneix com el Corpus de Sang.
+
+PAU CLARIS I LA REPÚBLICA CATALANA
+• Pau Claris era el president de la Diputació del General (Generalitat de Catalunya).
+• Va tenir un paper fonamental durant la revolta.
+• El gener de 1641 va proclamar la República Catalana sota la protecció de França.
+• Catalunya va establir una aliança amb França, governada per Lluís XIII.
+A partir d'aquí, França va intervenir militarment contra la monarquia hispànica.
+
+DESENVOLUPAMENT DE LA GUERRA
+• Espanya va lluitar contra França i els catalans aliats amb els francesos.
+• La guerra va acabar dividint Catalunya i va tenir conseqüències molt importants.
+• Barcelona va tornar a quedar sota el control de Felip IV el 1652.
+• El conflicte entre França i Espanya va continuar fins al Tractat dels Pirineus, el 1659.
+
+EL TRACTAT DELS PIRINEUS (1659)
+Va ser un acord de pau entre Espanya i França.
+• Espanya va cedir a França el Rosselló, el Conflent, el Vallespir i part de la Cerdanya.
+• Aquests territoris van quedar sota domini francès.
+• Es va posar fi a la guerra entre les dues monarquies.
+
+SEQÜÈNCIA PER MEMORITZAR:
+Olivares → abusos dels soldats → Corpus de Sang (7 juny 1640) → Pau Claris → República Catalana → aliança amb França → Guerra dels Segadors → Tractat dels Pirineus (1659).`,questions:[
+["Quines eren les causes principals de la Guerra dels Segadors?","Olivares volia més contribució catalana a les despeses militars; les tropes reials s'allotjaven a les cases; els soldats cometien abusos, robatoris i violències; la població estava enfadada."],
+["Quan va tenir lloc el Corpus de Sang?","El 7 de juny de 1640, durant la celebració del Corpus Christi."],
+["Què va passar durant el Corpus de Sang?","Molts segadors van entrar a Barcelona, hi va haver enfrontaments i revoltes contra les autoritats reials i va morir el virrei, el comte de Santa Coloma."],
+["Qui era Pau Claris?","El president de la Diputació del General (Generalitat de Catalunya), amb un paper fonamental durant la revolta."],
+["Què va proclamar Pau Claris el gener de 1641?","La República Catalana sota la protecció de França."],
+["Amb quin país es va aliar Catalunya i qui el governava?","Amb França, governada per Lluís XIII."],
+["Quan va tornar Barcelona sota el control de Felip IV?","L'any 1652."],
+["Què va ser el Tractat dels Pirineus de 1659?","Un acord de pau entre Espanya i França que va posar fi a la guerra entre les dues monarquies."],
+["Quins territoris va cedir Espanya a França pel Tractat dels Pirineus?","El Rosselló, el Conflent, el Vallespir i part de la Cerdanya."],
+["Explica la seqüència de la Guerra dels Segadors.","Olivares, abusos dels soldats, Corpus de Sang, Pau Claris, República Catalana, aliança amb França, Guerra dels Segadors i Tractat dels Pirineus de 1659."]]},
+{title:"Carles II (1665-1700)",body:`Va ser l'últim rei de la dinastia dels Habsburg a Espanya.
+
+Se'l coneixia com «El Hechizado» (l'Encantat) perquè la gent de l'època creia que estava embruixat a causa de les seves nombroses malalties.
+
+CARACTERÍSTIQUES:
+• Tenia una salut molt feble des de petit.
+• Va patir problemes físics i de salut durant tota la vida.
+• No va tenir descendència.
+• La seva mare, Mariana d'Àustria, va exercir la regència durant els primers anys del seu regnat.
+• El poder va estar en mans de diferents consellers i favorits.
+
+EL FET MÉS IMPORTANT:
+Com que no tenia fills, es va produir una crisi successòria: no hi havia un hereu directe clar.
+
+Abans de morir, l'any 1700, va nomenar hereu Felip d'Anjou, net del rei Lluís XIV de França.
+
+Això va provocar la Guerra de Successió Espanyola.`,questions:[
+["Qui va ser Carles II?","L'últim rei de la dinastia dels Habsburg a Espanya."],
+["Per què se'l coneixia com «El Hechizado»?","Perquè la gent de l'època creia que estava embruixat a causa de les seves nombroses malalties."],
+["Com era la seva salut?","Molt feble des de petit; va patir problemes físics i de salut durant tota la vida."],
+["Va tenir descendència?","No, no va tenir descendència."],
+["Qui va exercir la regència durant els primers anys del seu regnat?","La seva mare, Mariana d'Àustria."],
+["Què va provocar que Carles II no tingués fills?","Una crisi successòria, perquè no hi havia un hereu directe clar."],
+["A qui va nomenar hereu abans de morir i en quin any?","A Felip d'Anjou, net de Lluís XIV de França, l'any 1700."],
+["Quina guerra va provocar aquesta successió?","La Guerra de Successió Espanyola."]]}
+]},
+{title:"Les dinasties de la monarquia hispànica",sections:[
+{title:"Trastàmara, Habsburg o Àustries i Borbons",body:`Això és molt important perquè et poden demanar identificar a quina dinastia pertany cada rei.
+
+1. DINASTIA DELS TRASTÀMARA (segles XV-XVI)
+• Isabel I de Castella.
+• Ferran II d'Aragó.
+• Joana I de Castella.
+
+2. DINASTIA DELS HABSBURG O ÀUSTRIES (1516-1700)
+• Felip I el Bell.
+• Carles I.
+• Felip II.
+• Felip III.
+• Felip IV.
+• Carles II.
+
+3. DINASTIA DELS BORBONS (des de 1700)
+• Felip V.
+• És el primer rei Borbó d'Espanya.
+
+ATENCIÓ: Joana I era de la dinastia dels Trastàmara per naixement, però el seu fill Carles I va iniciar la dinastia dels Habsburg a la monarquia hispànica.`,questions:[
+["Quins reis pertanyien a la dinastia dels Trastàmara segons els apunts?","Isabel I de Castella, Ferran II d'Aragó i Joana I de Castella."],
+["Quins reis pertanyien als Habsburg o Àustries?","Felip I el Bell, Carles I, Felip II, Felip III, Felip IV i Carles II."],
+["Quin va ser el primer rei Borbó d'Espanya?","Felip V."],
+["Des de quin any situa els apunts la dinastia dels Borbons?","Des de 1700."],
+["A quina dinastia pertanyia Joana I per naixement?","A la dinastia dels Trastàmara."],
+["Quina dinastia va iniciar Carles I a la monarquia hispànica?","La dinastia dels Habsburg o Àustries."]]}
+]},
+{title:"La Guerra de Successió Espanyola (1701-1714)",sections:[
+{title:"Per què va començar? Els dos candidats",body:`L'any 1700 va morir Carles II sense tenir fills.
+
+Abans de morir, va nomenar hereu Felip d'Anjou, que era net de Lluís XIV, rei de França.
+
+Però altres països europeus no volien que França i Espanya quedessin governades per la mateixa família, perquè això podia crear una monarquia massa poderosa.
+
+Per aquest motiu va començar la Guerra de Successió Espanyola.
+
+CANDIDAT 1: L'ARXIDUC CARLES D'ÀUSTRIA
+Era membre de la família dels Habsburg.
+
+Tenia el suport de:
+• Anglaterra.
+• Holanda (Províncies Unides).
+• Àustria.
+• Portugal.
+• Savoia.
+• Diversos estats del Sacre Imperi Romanogermànic.
+• Catalunya i bona part dels altres territoris de la Corona d'Aragó.
+
+Catalunya va donar suport a Carles perquè defensava millor el manteniment de les institucions i les lleis pròpies dels territoris de la Corona d'Aragó.
+
+CANDIDAT 2: FELIP D'ANJOU (BORBÓ)
+Era net de Lluís XIV, rei de França.
+
+Tenia el suport de:
+• França.
+• La major part de Castella.
+
+Felip d'Anjou defensava un model de monarquia més centralitzat, inspirat en el model francès. Això significava concentrar més poder en el rei i reduir les institucions pròpies dels diferents territoris.`,questions:[
+["Quan va morir Carles II i què no tenia?","L'any 1700; va morir sense tenir fills."],
+["A qui va nomenar hereu Carles II?","A Felip d'Anjou, net de Lluís XIV, rei de França."],
+["Per què altres països europeus s'oposaven a aquesta successió?","Perquè no volien que França i Espanya quedessin governades per la mateixa família, cosa que podia crear una monarquia massa poderosa."],
+["Qui era l'arxiduc Carles d'Àustria?","Un membre de la família dels Habsburg."],
+["Quins territoris i països donaven suport a l'arxiduc Carles?","Anglaterra, Holanda, Àustria, Portugal, Savoia, diversos estats del Sacre Imperi Romanogermànic, Catalunya i bona part dels altres territoris de la Corona d'Aragó."],
+["Per què Catalunya va donar suport a l'arxiduc Carles?","Perquè defensava millor el manteniment de les institucions i les lleis pròpies dels territoris de la Corona d'Aragó."],
+["Qui era Felip d'Anjou?","El net de Lluís XIV, rei de França, i candidat Borbó."],
+["Qui donava suport a Felip d'Anjou?","França i la major part de Castella."],
+["Quin model de monarquia defensava Felip d'Anjou?","Un model més centralitzat, inspirat en el francès, que concentrava més poder en el rei i reduïa les institucions pròpies dels territoris."]]},
+{title:"Com va acabar la guerra?",body:`Al principi, l'arxiduc Carles tenia el suport d'una gran aliança europea.
+
+Però van passar diverses coses:
+1. L'arxiduc Carles va heretar la corona austríaca i va ser elegit emperador del Sacre Imperi Romanogermànic el 1711.
+2. Anglaterra i altres potències van començar a tenir por que Carles acumulés massa poder.
+3. Les potències europees van començar a retirar el seu suport militar.
+4. Es van iniciar negociacions per acabar la guerra.
+
+EL TRACTAT D'UTRECHT (1713)
+Va ser un conjunt d'acords de pau que van posar fi a la guerra entre les principals potències europees.
+
+Què es va acordar?
+• Felip V era reconegut com a rei d'Espanya.
+• Felip V renunciava als seus drets al tron de França.
+• Gran Bretanya va obtenir Gibraltar i Menorca.
+• Espanya va perdre altres territoris europeus, que van passar a diferents potències.
+
+QUÈ VA PASSAR AMB CATALUNYA?
+Catalunya va continuar resistint, tot i que gairebé tots els aliats internacionals havien abandonat la guerra. Finalment, Catalunya va quedar pràcticament sola davant les tropes de Felip V.`,questions:[
+["Què va passar amb l'arxiduc Carles l'any 1711?","Va heretar la corona austríaca i va ser elegit emperador del Sacre Imperi Romanogermànic."],
+["Per què Anglaterra i altres potències van començar a retirar el suport?","Perquè tenien por que Carles acumulés massa poder."],
+["Què va ser el Tractat d'Utrecht de 1713?","Un conjunt d'acords de pau que van posar fi a la guerra entre les principals potències europees."],
+["Què es va reconèixer sobre Felip V a Utrecht?","Felip V era reconegut com a rei d'Espanya."],
+["A què va renunciar Felip V?","Als seus drets al tron de França."],
+["Quins territoris va obtenir Gran Bretanya?","Gibraltar i Menorca."],
+["Què va passar amb Catalunya després que els aliats abandonessin la guerra?","Va continuar resistint i va quedar pràcticament sola davant les tropes de Felip V."]]},
+{title:"L'11 de setembre de 1714: caiguda de Barcelona",body:`• Les tropes borbòniques van assetjar Barcelona.
+• La ciutat va resistir durant molt de temps.
+• Finalment, l'11 de setembre de 1714, les tropes de Felip V van aconseguir entrar a Barcelona.
+• La ciutat va caure després d'una resistència molt important.
+
+Aquesta data és la que actualment celebrem com la Diada Nacional de Catalunya.
+
+IDEA CLAU: Catalunya havia defensat l'arxiduc Carles i les seves institucions pròpies, però Felip V va guanyar la guerra i va imposar un model de monarquia centralitzada.`,questions:[
+["Què van fer les tropes borbòniques a Barcelona?","La van assetjar."],
+["Quina data va caure Barcelona?","L'11 de setembre de 1714."],
+["Qui va aconseguir entrar a Barcelona?","Les tropes de Felip V."],
+["Quina celebració actual correspon a l'11 de setembre?","La Diada Nacional de Catalunya."],
+["Què havia defensat Catalunya durant la guerra i què va imposar Felip V?","Catalunya havia defensat l'arxiduc Carles i les seves institucions pròpies; Felip V va imposar una monarquia centralitzada."]]}
+]},
+{title:"El Decret de Nova Planta (1716 a Catalunya)",sections:[
+{title:"El Decret de Nova Planta i les seves conseqüències",body:`Després de guanyar la Guerra de Successió, Felip V va voler imposar un model de govern centralitzat, semblant al de França.
+
+Per aconseguir-ho, va aprovar els Decrets de Nova Planta.
+
+A Catalunya, el decret es va aprovar el 1716.
+
+QUÈ VA PROVOCAR EL DECRET DE NOVA PLANTA?
+1. ABOLICIÓ DE LES INSTITUCIONS CATALANES: es van eliminar institucions pròpies com les Corts Catalanes i la Diputació del General (Generalitat).
+2. ABOLICIÓ DE LES LLEIS I CONSTITUCIONS PRÒPIES: es va eliminar gran part del sistema polític i jurídic català.
+3. IMPOSICIÓ DEL MODEL CASTELLÀ: es va introduir una administració més centralitzada, seguint el model de Castella.
+4. NOVA ORGANITZACIÓ TERRITORIAL: es van establir corregiments i corregidors.
+5. CANVIS ECONÒMICS I FISCALS: es va introduir un nou sistema tributari, com el cadastre a Catalunya.
+6. RESTRICCIÓ DEL CATALÀ EN L'ADMINISTRACIÓ: el castellà va passar a ser la llengua de l'administració oficial i de la justícia.
+
+IMPORTANT: no significa que tota la cultura catalana quedés prohibida. El que es va eliminar va ser sobretot l'autogovern i es van restringir els usos oficials de la llengua catalana.
+
+CONSEQÜÈNCIA FONAMENTAL:
+Catalunya va perdre les seves institucions polítiques pròpies i va quedar sotmesa a un sistema de govern més centralitzat sota el poder de Felip V.`,questions:[
+["Què volia imposar Felip V després de guanyar la Guerra de Successió?","Un model de govern centralitzat, semblant al de França."],
+["Què eren els Decrets de Nova Planta?","Els decrets aprovats per Felip V per imposar un model de govern centralitzat."],
+["Quan es va aprovar el Decret de Nova Planta a Catalunya?","L'any 1716."],
+["Quines institucions catalanes es van abolir?","Institucions pròpies com les Corts Catalanes i la Diputació del General (Generalitat)."],
+["Què va passar amb les lleis i constitucions pròpies?","Es va eliminar gran part del sistema polític i jurídic català."],
+["Quin model administratiu es va imposar?","Una administració més centralitzada, seguint el model de Castella."],
+["Quina nova organització territorial es va establir?","Es van establir corregiments i corregidors."],
+["Quin canvi fiscal es va introduir a Catalunya?","Un nou sistema tributari, com el cadastre."],
+["Quina llengua va passar a ser la llengua de l'administració oficial i de la justícia?","El castellà."],
+["El Decret de Nova Planta va prohibir tota la cultura catalana?","No. Sobretot va eliminar l'autogovern i va restringir els usos oficials de la llengua catalana."],
+["Quina va ser la conseqüència fonamental del Decret de Nova Planta?","Catalunya va perdre les seves institucions polítiques pròpies i va quedar sotmesa a un govern més centralitzat sota Felip V."]]}
+]}
+];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const state={page:'home',part:0,section:0,q:0,mode:'section',phase:'read',history:[],name:localStorage.getItem('aula_name')||'',points:+localStorage.getItem('aula_points')||0,done:JSON.parse(localStorage.getItem('aula_done')||'{}'),read:JSON.parse(localStorage.getItem('aula_read')||'{}'),answers:'',chat:[]};
+const partQuizDone=JSON.parse(localStorage.getItem('aula_quiz')||'{}');
+function save(){localStorage.setItem('aula_points',state.points);localStorage.setItem('aula_done',JSON.stringify(state.done));localStorage.setItem('aula_read',JSON.stringify(state.read));localStorage.setItem('aula_quiz',JSON.stringify(partQuizDone));}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function toast(s){let t=$('#toast');t.textContent=s;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2200);}
+function setName(n){state.name=n;localStorage.setItem('aula_name',n);$('#profileName').textContent=n;$('#avatar').textContent=n.trim().charAt(0).toUpperCase();$('#nameModal').classList.add('hidden');render();}
+function showName(){ $('#nameInput').value=state.name;$('#nameModal').classList.remove('hidden');setTimeout(()=>$('#nameInput').focus(),50);}
+$('#saveName').onclick=()=>{let n=$('#nameInput').value.trim();if(!n)return toast('Escriu un nom per continuar.');setName(n);syncUser();};
+$('#editName').onclick=showName;
+function nav(p){state.page=p;$$('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page===p));render();}
+$$('.nav').forEach(b=>b.onclick=()=>nav(b.dataset.page));
+function goBack(){if(state.history.length){let s=state.history.pop();Object.assign(state,s);render();}else nav('learn');}
+function snapshot(){state.history.push({page:state.page,part:state.part,section:state.section,q:state.q,mode:state.mode,phase:state.phase});}
+function progressCount(){return Object.keys(state.done).length;}
+function sectionKey(p,s){return p+'-'+s;}
+function sectionDone(p,s){return !!state.done[sectionKey(p,s)];}
+function allSectionDone(p){return parts[p].sections.every((_,i)=>sectionDone(p,i));}
+function completedParts(){return parts.filter((_,i)=>partQuizDone[i]).length;}
+function renderHome(){let pct=Math.round(progressCount()/parts.reduce((n,p)=>n+p.sections.length,0)*100);return `<div class="hero"><div class="eyebrow">EL TEU ESPAI D'ESTUDI</div><h1>Aprèn amb calma.<br><span style="color:#a58d6c">Recorda per sempre.</span></h1><p>Una ruta guiada pels teus apunts d'història. Llegeix, recupera la informació de memòria i consolida cada tema abans de continuar.</p></div><div class="statrow"><div class="stat"><strong>${state.points}</strong><span>Punts acumulats</span></div><div class="stat"><strong>${pct}%</strong><span>Progrés d'estudi</span></div><div class="stat"><strong>${completedParts()}/${parts.length}</strong><span>Temes superats</span></div></div><div class="section-head"><h2>Continua aprenent</h2><button class="btn small" onclick="nav('learn')">Veure ruta →</button></div><div class="grid">${parts.map((p,i)=>`<div class="topic-card" onclick="startPart(${i})"><div class="topic-num">TEMA 0${i+1}</div><h3>${esc(p.title)}</h3><p>${p.sections.length} apartats · ${p.sections.reduce((n,s)=>n+s.questions.length,0)} preguntes de pràctica</p><div class="progress"><span style="width:${Math.round(p.sections.filter((s,j)=>sectionDone(i,j)).length/p.sections.length*100)}%"></span></div><div class="meta"><span>${p.sections.filter((s,j)=>sectionDone(i,j)).length} de ${p.sections.length} apartats</span><span>${partQuizDone[i]?'✓ Tema superat':'Comença →'}</span></div></div>`).join('')}</div>`;}
+function renderLearn(){return `<div class="hero"><div class="eyebrow">MÈTODE D'APRENENTATGE</div><h1>La teva ruta.</h1><p>Segueix l'ordre dels apunts. Primer llegeix cada apartat; després respon les preguntes sense mirar. Si una resposta no és correcta, tornaràs a estudiar l'apartat per consolidar-lo.</p></div><div class="grid">${parts.map((p,i)=>`<div class="topic-card" onclick="startPart(${i})"><div class="topic-num">PART ${i+1}</div><h3>${esc(p.title)}</h3><p>${p.sections.length} seccions · ${p.sections.reduce((n,s)=>n+s.questions.length,0)} preguntes</p><div class="progress"><span style="width:${Math.round(p.sections.filter((s,j)=>sectionDone(i,j)).length/p.sections.length*100)}%"></span></div><div class="meta"><span>${p.sections.filter((s,j)=>sectionDone(i,j)).length}/${p.sections.length} seccions dominades</span><span>${partQuizDone[i]?'Superada ✓':'Estudiar →'}</span></div></div>`).join('')}</div>`;}
+function startPart(p){state.part=p;state.section=0;state.q=0;state.mode='section';state.phase='read';state.history=[];nav('learn');renderStudy();}
+function beginSection(){state.phase='question';state.q=0;state.answers='';renderStudy();}
+function startPartQuiz(){state.mode='quiz';state.q=0;state.phase='question';state.answers='';state.history=[];renderStudy();}
+function currentQuestions(){if(state.mode==='quiz')return parts[state.part].sections.flatMap((s,si)=>s.questions.map(q=>({q:q[0],a:q[1],section:s.title})));return parts[state.part].sections[state.section].questions.map(q=>({q:q[0],a:q[1]}));}
+function renderStudy(){state.page='study';$$('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page==='learn'));let p=parts[state.part],s=p.sections[state.section],qs=currentQuestions(),q=qs[state.q];let total=qs.length;
+let top=`<button class="back" onclick="goBack()">← Enrere</button><div class="eyebrow">PART ${state.part+1} · ${esc(p.title)}</div><div class="studybar"><div><div style="font:700 18px Manrope;margin:7px 0">${state.mode==='quiz'?'Repàs general del tema':esc(s.title)}</div><div class="notice">${state.mode==='quiz'?'Comprova tot el que has après en aquesta part.':'Apartat '+(state.section+1)+' de '+p.sections.length}</div></div><div class="stepdots">${Array.from({length:Math.min(total,16)},(_,i)=>`<i class="${i<state.q?'done':''}"></i>`).join('')}</div></div>`;
+if(state.phase==='read'){ $('#main').innerHTML=top+`<div class="panel"><div class="eyebrow">LECTURA ABANS DE PRACTICAR</div><div class="reading">${bodyHtml(s.body)}</div><div class="callout"><strong>Consell:</strong> llegeix amb atenció i intenta explicar les idees principals amb les teves paraules abans de començar les preguntes.</div><button class="btn primary" onclick="beginSection()">Ja m'ho he llegit · Començar preguntes →</button></div>`;return;}
+$('#main').innerHTML=top+`<div class="panel"><div class="eyebrow">${state.mode==='quiz'?'QUIZ GENERAL':'PREGUNTA '+(state.q+1)+' DE '+total}</div><div class="question">${esc(q.q)}</div>${state.phase==='question'?`<textarea class="answerbox" id="answerInput" placeholder="Escriu la teva resposta amb les teves paraules...">${esc(state.answers)}</textarea><div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:12px"><span class="notice">No cal que sigui literal: intenta incloure les idees importants.</span><button class="btn primary" onclick="revealAnswer()">Posar resposta →</button></div>`:`<div class="flip"><div class="flip-inner flipped" id="flipCard"><div class="face"><h3>La pregunta</h3><p>${esc(q.q)}</p></div><div class="face backface"><div class="eyebrow">RESPOSTA DELS APUNTS</div><h3>Resposta de referència</h3><p>${esc(q.a)}</p></div></div></div><div class="judge"><button class="btn bad" onclick="judge(false)">✕ No ho sabia / Està malament</button><button class="btn good" onclick="judge(true)">✓ Ho he respost bé</button></div><p class="notice" style="margin-top:12px">Sigues honest/a: marca «bé» només si la teva resposta conté les idees essencials.</p>`}</div>`;
+}
+function bodyHtml(body){return body.split('\n').map(line=>{let t=esc(line);if(!t.trim())return '';if(/^(MOLT IMPORTANT|IMPORTANT|ATENCIÓ|COMPTE|IDEA CLAU|PER MEMORITZAR|QUÈ SÓN|CAUSES|EL CORPUS|PAU CLARIS|DESENVOLUPAMENT|EL TRACTAT|CONSEQÜÈNCIA|TERRITORIS|FETS|CARACTERÍSTIQUES|CANDIDAT|QUÈ VA PASSAR|SEQÜÈNCIA|DE LA SEVA|DE LA FAMÍLIA|1\. |2\. |3\. |4\. |5\. |6\. )/.test(line))return `<p><strong>${t}</strong></p>`;if(line.startsWith('• '))return `<p style="margin:3px 0 3px 12px">· ${t.slice(2)}</p>`;return `<p>${t}</p>`;}).join('');}
+function revealAnswer(){let v=$('#answerInput').value.trim();if(!v)return toast('Escriu una resposta abans de continuar.');state.answers=v;state.phase='reveal';renderStudy();}
+function judge(ok){if(!ok){state.phase='read';state.q=0;state.answers='';toast('Tornem a llegir aquest apartat. Ho consolidarem!');renderStudy();return;}
+state.q++;state.answers='';let qs=currentQuestions();if(state.q<qs.length){state.phase='question';renderStudy();return;}
+if(state.mode==='quiz'){partQuizDone[state.part]=true;save();state.points+=50;save();syncUser();$('#main').innerHTML=`<div class="panel" style="text-align:center;padding:48px 25px"><div style="font-size:42px">✦</div><div class="eyebrow">TEMA SUPERAT</div><h2 style="font:700 30px Manrope;letter-spacing:-1px">Excel·lent treball.</h2><p class="notice">Has respost correctament totes les preguntes del repàs general de «${esc(parts[state.part].title)}».</p><div style="font:700 26px Manrope;margin:20px">+50 punts</div>${state.part<parts.length-1?`<button class="btn primary" onclick="startPart(${state.part+1})">Continuar amb la part ${state.part+2} →</button>`:`<button class="btn primary" onclick="nav('home')">Tornar a l'inici →</button>`}</div>`;return;}
+state.done[sectionKey(state.part,state.section)]=true;state.points+=10;save();syncUser();
+if(state.section<parts[state.part].sections.length-1){state.section++;state.phase='read';state.q=0;toast('Apartat dominat · +10 punts');renderStudy();}
+else{startPartQuiz();}
+}
+function renderNotes(){return `<div class="hero"><div class="eyebrow">BIBLIOTECA PERSONAL</div><h1>Els apunts, sencers.</h1><p>Tot el contingut organitzat per temes i apartats. Pots desplegar, cercar i repassar qualsevol secció lliurement.</p></div><input class="search" id="notesSearch" placeholder="⌕  Cerca un rei, una data, un esdeveniment..."><div class="notes-list" id="notesList">${parts.map((p,i)=>`<details class="notes-item" open><summary>PART ${i+1} · ${esc(p.title)}</summary>${p.sections.map((s,j)=>`<details class="notes-item" style="margin-top:10px;background:#fcfbf9"><summary>${esc(s.title)}</summary><div class="reading">${bodyHtml(s.body)}</div></details>`).join('')}</details>`).join('')}</div>`;}
+function filterNotes(){let q=$('#notesSearch').value.toLowerCase();$$('#notesList .notes-item').forEach(el=>{let match=el.textContent.toLowerCase().includes(q);el.classList.toggle('hidden',!match);if(q&&match)el.open=true;});}
+function renderRanking(){return `<div class="hero"><div class="eyebrow">COMUNITAT D'ESTUDI</div><h1>Aprenem plegats.</h1><p>Guanya punts consolidant els apartats i superant els repassos generals. El ranking i el xat compartits necessiten configurar Firebase (instruccions incloses).</p></div><div class="grid"><div class="panel"><div class="section-head" style="margin-top:0"><h2>🏆 Classificació</h2><span class="notice" id="rankStatus">Mode local</span></div><div id="rankList"><div class="rankrow"><span class="ranknum">1</span><span class="rankname">${esc(state.name||'Tu')} <span class="notice">(tu)</span></span><span class="rankpoints">${state.points} pts</span></div></div><p class="notice">En mode local només apareix el teu perfil. Amb Firebase veuràs els altres estudiants.</p></div><div class="panel"><div class="section-head" style="margin-top:0"><h2>💬 Xat d'estudi</h2></div><div class="chatlog" id="chatlog"><div class="empty">El xat compartit apareixerà quan connectis Firebase.</div></div><div class="chatform"><input id="chatInput" placeholder="Escriu un missatge..." maxlength="400"><button class="btn primary" onclick="sendChat()">Enviar</button></div></div></div>`;}
+function render(){let m=$('#main');if(state.page==='home')m.innerHTML=renderHome();else if(state.page==='learn')m.innerHTML=renderLearn();else if(state.page==='notes'){m.innerHTML=renderNotes();$('#notesSearch').oninput=filterNotes;}else if(state.page==='ranking'){m.innerHTML=renderRanking();loadCommunity();}}
+function sendChat(){let input=$('#chatInput');if(!input||!input.value.trim())return;let msg=input.value.trim();if(!db){toast('Connecta Firebase per enviar missatges a tothom.');return;}db.collection('messages').add({name:state.name,text:msg,uid:auth.currentUser.uid,created:firebase.firestore.FieldValue.serverTimestamp()}).then(()=>input.value='').catch(()=>toast('No s’ha pogut enviar el missatge.'));}
+/* ── FIREBASE: enganxa aquí la configuració del teu projecte per activar xat i ranking compartits ── */
+const firebaseConfig = {
+  apiKey: "ENGANXA_AQUI_API_KEY",
+  authDomain: "EL_TEU_PROJECTE.firebaseapp.com",
+  projectId: "EL_TEU_PROJECTE",
+  storageBucket: "EL_TEU_PROJECTE.appspot.com",
+  messagingSenderId: "ENGANXA_SENDER_ID",
+  appId: "ENGANXA_APP_ID"
+};
+let db=null,auth=null;
+try{if(firebaseConfig.apiKey!=="ENGANXA_AQUI_API_KEY"&&window.firebase){firebase.initializeApp(firebaseConfig);auth=firebase.auth();db=firebase.firestore();auth.signInAnonymously().then(()=>{syncUser();if(state.page==='ranking')loadCommunity();}).catch(console.error);}}catch(e){console.warn('Firebase no configurat',e);}
+function syncUser(){if(!db||!auth||!auth.currentUser||!state.name)return;db.collection('users').doc(auth.currentUser.uid).set({name:state.name,points:state.points,updated:firebase.firestore.FieldValue.serverTimestamp()},{merge:true}).catch(console.error);}
+function loadCommunity(){if(!db)return;$('#rankStatus').textContent='En directe';db.collection('users').orderBy('points','desc').limit(30).onSnapshot(snap=>{let rows=snap.docs.map(d=>({...d.data(),uid:d.id}));$('#rankList').innerHTML=rows.map((u,i)=>`<div class="rankrow"><span class="ranknum">${i+1}</span><span class="rankname">${esc(u.name||'Estudiant')}${u.uid===auth.currentUser?.uid?' <span class="notice">(tu)</span>':''}</span><span class="rankpoints">${u.points||0} pts</span></div>`).join('')||'<div class="empty">Encara no hi ha estudiants.</div>';});db.collection('messages').orderBy('created','asc').limitToLast(60).onSnapshot(snap=>{let log=$('#chatlog');if(!log)return;log.innerHTML=snap.docs.map(d=>{let x=d.data(),mine=auth.currentUser&&x.uid===auth.currentUser.uid;return `<div class="bubble ${mine?'mine':''}"><small>${esc(x.name||'Estudiant')}</small>${esc(x.text||'')}</div>`}).join('');log.scrollTop=log.scrollHeight;});}
+const audio=$('#studyMusic');$('#musicBtn').onclick=()=>{if(!audio.src){toast('Afegeix el fitxer musica.mp3 a la carpeta del web.');return;}if(audio.paused){audio.play().then(()=>$('#musicBtn').textContent='♫ Silenciar música').catch(()=>toast('No s’ha pogut reproduir la música.'));}else{audio.pause();$('#musicBtn').textContent='♫ Activar música';}};
+audio.src='musica.mp3';
+if(!state.name)showName();else setName(state.name);
+render();
+</script>
+</body></html>
